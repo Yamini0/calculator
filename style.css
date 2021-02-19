@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+/*background*/
+body{
+    padding: 0;
+    margin: 0;
+    background: goldenrod;
+}
+/*calculator*/
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);    /*123**/
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);    /*ac147.*/
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,.75);
+}
+.calculator-grid > button:hover{
+    background-color: rgba(255,255,255,.9);
+}
+.span-two{
+    grid-column: span 2;
+}
+/*pura output section*/
+.output{
+    grid-column: 1 / -1;   /*1 means the 1st column and neg 1 means last column*/
+    background-color: blueviolet;
+    /*align item inside the output*/
+    align-items:flex-end ;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+.output .current-operand {
+    color: aliceblue;
+    font-size: 2.5rem;
+}
+
+
