@@ -8,7 +8,7 @@ const currentOperandText = document.querySelector('[data-current-operand]');
 
 
 
-//capital c wala class calculator hai uski value we r giving to a var and 
+//C wala class calculator hai uski value we r giving to a var and 
 //that var become the object of that class 
 //anything defined with new becomes a class
 const calculator = new Calculator(previousOperandText, currentOperandText);
